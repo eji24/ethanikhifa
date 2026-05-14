@@ -193,6 +193,11 @@ footer{padding:1.5rem 2.5rem;border-top:1px solid var(--border);display:flex;jus
 
 
 
+<div class="loader" id="loader">
+  <div class="loader-name"><span>ETHAN IKHIFA</span></div>
+  <div class="loader-sub">NYC · LA · EU — Videographer & Creative Director</div>
+  <div class="loader-line"></div>
+</div>
 <div class="grain"></div>
 <div class="scanlines"></div>
 
@@ -439,6 +444,13 @@ footer{padding:1.5rem 2.5rem;border-top:1px solid var(--border);display:flex;jus
 </footer>
 
 <script>
+// Loader - fire on load
+document.addEventListener("DOMContentLoaded",function(){
+  setTimeout(function(){
+    var l=document.getElementById("loader");
+    if(l){l.style.opacity="0";l.style.visibility="hidden";}
+  },2500);
+});
 // Cursor
 const cur = document.getElementById('cursor');
 const ring = document.getElementById('ring');
