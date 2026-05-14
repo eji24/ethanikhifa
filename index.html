@@ -460,7 +460,7 @@ function animRing(){
 animRing();
 
 // Loader
-setTimeout(()=>document.getElementById('loader').classList.add('gone'),3000);
+setTimeout(()=>{var l=document.getElementById("loader");if(l){l.classList.add("gone");}},1000);
 
 // Player
 function play(id,title){
