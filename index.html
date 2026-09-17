@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ethan Ikhifa</title>
+<title>Ikhifa95 WORKS</title>
 <style>
 /* ── WIN98 SYSTEM PALETTE ── */
 :root {
@@ -32,60 +32,55 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { width: 100%; height: 100%; overflow: hidden; font-family: var(--sys); font-size: 11px; user-select: none; cursor: default; }
 
-/* ── HALFTONE WALLPAPER ── */
+/* ── IKHIFA95 TEAL DESKTOP ── */
 #desktop {
   position: fixed; inset: 0 0 28px 0;
-  background: #000;
+  background: #008080;
+  /* subtle noise texture like Win95 */
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='4' height='4' fill='%23008080'/%3E%3Crect x='0' y='0' width='1' height='1' fill='%23007575' opacity='0.4'/%3E%3Crect x='2' y='2' width='1' height='1' fill='%23009090' opacity='0.3'/%3E%3Crect x='1' y='3' width='1' height='1' fill='%23006868' opacity='0.2'/%3E%3C/svg%3E");
   overflow: hidden;
 }
-#halftone-canvas {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  pointer-events: none; z-index: 0;
-  opacity: 0.92;
-}
-/* editorial type overlay */
-#wall-text {
-  position: absolute; inset: 0; z-index: 1;
-  pointer-events: none;
-  overflow: hidden;
-}
-#wall-headline {
+
+/* ── IKHIFA95 LOGO (wallpaper center) ── */
+#desk-logo {
   position: absolute;
-  left: -8px; top: 38%;
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-weight: 900;
-  line-height: 0.88;
-  color: #fff;
-  user-select: none;
-}
-#wall-headline .line1 { font-size: clamp(60px, 9vw, 130px); display: block; letter-spacing: -0.03em; }
-#wall-headline .line2 { font-size: clamp(55px, 8.5vw, 120px); display: block; font-style: italic; color: rgba(255,255,255,0.55); letter-spacing: -0.02em; }
-#wall-headline .line3 { font-size: clamp(60px, 9vw, 130px); display: block; letter-spacing: -0.03em; }
-
-/* small editorial text columns — texture only */
-#wall-col-left {
-  position: absolute; left: 12px; top: 12px;
-  font-family: 'Georgia', serif; font-size: 8px; line-height: 1.6;
-  color: rgba(255,255,255,0.22); width: 140px;
-  user-select: none;
-}
-#wall-col-right {
-  position: absolute; right: 12px; top: 12px;
-  font-family: 'Georgia', serif; font-size: 8px; line-height: 1.6;
-  color: rgba(255,255,255,0.22); width: 140px; text-align: right;
-  user-select: none;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -55%);
+  display: flex; flex-direction: column; align-items: center;
+  pointer-events: none; z-index: 1; user-select: none;
 }
 
-/* ── ICONS GRID ── */
+/* Pixelated Windows-flag style logo built in SVG */
+#desk-logo svg { width: 120px; height: 100px; margin-bottom: 18px; }
+
+#desk-logo-text {
+  text-align: center; line-height: 1;
+}
+#desk-logo-text .brand {
+  font-family: 'Arial Black', 'Arial', sans-serif;
+  font-weight: 900; font-size: 52px;
+  color: #000; letter-spacing: -1px;
+  display: inline;
+}
+#desk-logo-text .ver {
+  font-family: 'Arial', sans-serif;
+  font-weight: 400; font-size: 52px;
+  color: #000; letter-spacing: -1px;
+}
+#desk-logo-text .sub {
+  display: block;
+  font-family: 'Arial Black', 'Arial', sans-serif;
+  font-weight: 900; font-size: 20px;
+  color: #fff; letter-spacing: 4px;
+  margin-top: 4px;
+}
+
+/* ── ICONS — LEFT COLUMN ── */
 #icons {
-  position: absolute; inset: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 75px);
-  grid-auto-rows: 80px;
-  align-content: start;
-  padding: 8px;
-  gap: 0;
+  position: absolute; top: 8px; left: 8px;
+  display: flex; flex-direction: column;
+  gap: 0; z-index: 10;
 }
 
 .icon {
@@ -518,14 +513,52 @@ html, body { width: 100%; height: 100%; overflow: hidden; font-family: var(--sys
 
 <!-- DESKTOP -->
 <div id="desktop" oncontextmenu="showCtx(event)">
-  <canvas id="halftone-canvas"></canvas>
-  <div id="wall-text">
-    <div id="wall-col-left">filmmaker · model · photographer · web designer · Brooklyn NY · 2026 · available for hire · creative direction · visual storytelling · Hi8 · Sony a6400 · DaVinci Resolve · Fusion NYC · IKHIFA WORKS · Moon & Cross · ethanikhifa@yahoo.com · 661-476-1539 · tell stories visually · filmmaker · model · photographer · web designer · Brooklyn NY · 2026 · available for hire · creative direction · visual storytelling</div>
-    <div id="wall-col-right">Ethan Ikhifa · Brooklyn New York · filmmaker · model · photographer · web designer · creative · Off-White · Eckhaus Latta · Troye Sivan · MAAP Apparel · Clementine · Fusion NYC · NYFW · salt marsh · MAESTRO · nagare · Moon & Cross · IKHIFA WORKS · GrayTecknologies · Sony a6400 · Sigma 30mm · Hi8 · DaVinci Resolve · Darktable · Fuji color science</div>
-    <div id="wall-headline">
-      <span class="line1">tell</span>
-      <span class="line2">stories</span>
-      <span class="line3">visually.</span>
+  <!-- IKHIFA95 LOGO — center of desktop wallpaper -->
+  <div id="desk-logo">
+    <!-- Pixelated Windows-style flag in brand colors -->
+    <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+      <!-- Flag warp grid — pixel art style -->
+      <!-- Top-left quadrant: orange -->
+      <rect x="28" y="8"  width="10" height="10" fill="#e87020" rx="0"/>
+      <rect x="38" y="6"  width="10" height="10" fill="#e87020" rx="0"/>
+      <rect x="48" y="4"  width="10" height="10" fill="#e87020" rx="0"/>
+      <rect x="28" y="19" width="10" height="10" fill="#e87020" rx="0"/>
+      <rect x="38" y="17" width="10" height="10" fill="#e87020" rx="0"/>
+      <rect x="48" y="15" width="10" height="10" fill="#e87020" rx="0"/>
+      <!-- Top-right quadrant: teal/green -->
+      <rect x="60" y="2"  width="10" height="10" fill="#00a878" rx="0"/>
+      <rect x="70" y="1"  width="10" height="10" fill="#00a878" rx="0"/>
+      <rect x="60" y="13" width="10" height="10" fill="#00a878" rx="0"/>
+      <rect x="70" y="12" width="10" height="10" fill="#00a878" rx="0"/>
+      <!-- Bottom-left quadrant: blue -->
+      <rect x="28" y="42" width="10" height="10" fill="#3060c8" rx="0"/>
+      <rect x="38" y="44" width="10" height="10" fill="#3060c8" rx="0"/>
+      <rect x="48" y="46" width="10" height="10" fill="#3060c8" rx="0"/>
+      <rect x="28" y="53" width="10" height="10" fill="#3060c8" rx="0"/>
+      <rect x="38" y="55" width="10" height="10" fill="#3060c8" rx="0"/>
+      <rect x="48" y="57" width="10" height="10" fill="#3060c8" rx="0"/>
+      <!-- Bottom-right quadrant: yellow -->
+      <rect x="60" y="48" width="10" height="10" fill="#f0c000" rx="0"/>
+      <rect x="70" y="50" width="10" height="10" fill="#f0c000" rx="0"/>
+      <rect x="60" y="59" width="10" height="10" fill="#f0c000" rx="0"/>
+      <rect x="70" y="61" width="10" height="10" fill="#f0c000" rx="0"/>
+      <!-- Black grid lines (the window frame) -->
+      <rect x="27" y="7"  width="2" height="56" fill="#000" transform="skewY(-8)"/>
+      <rect x="59" y="1"  width="2" height="62" fill="#000" transform="skewY(-8)"/>
+      <rect x="27" y="30" width="46" height="2"  fill="#000" transform="skewX(-4)"/>
+      <rect x="27" y="7"  width="46" height="2"  fill="#000" transform="skewX(-4)"/>
+      <!-- Trailing pixel scatter (top-left) -->
+      <rect x="6"  y="4"  width="5" height="5" fill="#3060c8" opacity="0.7"/>
+      <rect x="12" y="8"  width="5" height="5" fill="#e87020" opacity="0.6"/>
+      <rect x="8"  y="14" width="5" height="5" fill="#f0c000" opacity="0.5"/>
+      <rect x="14" y="18" width="4" height="4" fill="#3060c8" opacity="0.5"/>
+      <rect x="18" y="6"  width="4" height="4" fill="#e87020" opacity="0.4"/>
+      <rect x="4"  y="20" width="3" height="3" fill="#00a878" opacity="0.4"/>
+      <rect x="20" y="22" width="3" height="3" fill="#f0c000" opacity="0.3"/>
+    </svg>
+    <div id="desk-logo-text">
+      <span class="brand">Ikhifa</span><span class="ver">95</span>
+      <span class="sub">WORKS</span>
     </div>
   </div>
   <div id="icons">
@@ -1015,76 +1048,15 @@ function showCtx(e) {
 function hideCtx() { document.getElementById('ctx-menu').style.display='none'; }
 document.addEventListener('click', hideCtx);
 
-// ── HALFTONE PORTRAIT WALLPAPER ──
-function buildHalftone() {
-  const canvas = document.getElementById('halftone-canvas');
-  const W = window.innerWidth;
-  const H = window.innerHeight - 28;
-  canvas.width = W; canvas.height = H;
-  const ctx = canvas.getContext('2d');
-  const spacing = 11; // dot grid — larger = more LED/halftone feel
-  const cols = Math.ceil(W / spacing) + 1;
-  const rows = Math.ceil(H / spacing) + 1;
-
-  // returns brightness 0=black(silhouette) to 1=white(halftone field)
-  function brightness(nx, ny) {
-    const fx = (nx - 0.5) * 2;
-    const fy = ny * 1.1 - 0.04;
-
-    // silhouette body — dark voids in the dot field
-    // head
-    if (Math.pow(fx/0.115, 2) + Math.pow((fy-0.11)/0.135, 2) < 1) return Math.random() * 0.05;
-    // neck
-    if (Math.abs(fx) < 0.042 && fy > 0.235 && fy < 0.295) return Math.random() * 0.05;
-    // shoulders — wide at top
-    if (fy > 0.29 && fy < 0.38 && Math.abs(fx) < 0.21) return Math.random() * 0.05;
-    // torso
-    const tw = Math.max(0.055, 0.175 - Math.max(0, fy-0.38) * 0.14);
-    if (fy > 0.29 && fy < 0.64 && Math.abs(fx) < tw) return Math.random() * 0.05;
-    // left arm
-    if (fy > 0.32 && fy < 0.66 && Math.pow((fx+0.255)/0.072,2) + Math.pow((fy-0.46)/0.2,2) < 1) return Math.random()*0.05;
-    // right arm
-    if (fy > 0.32 && fy < 0.66 && Math.pow((fx-0.255)/0.072,2) + Math.pow((fy-0.46)/0.2,2) < 1) return Math.random()*0.05;
-    // hips
-    const hw = Math.max(0.04, 0.155 - Math.max(0,fy-0.64)*0.2);
-    if (fy > 0.64 && fy < 1.02 && Math.abs(fx) < hw) return Math.random()*0.05;
-    // legs
-    if (fy > 0.68) {
-      if (Math.pow((fx+0.082)/0.062,2)+Math.pow((fy-0.84)/0.23,2)<1) return Math.random()*0.05;
-      if (Math.pow((fx-0.082)/0.062,2)+Math.pow((fy-0.84)/0.23,2)<1) return Math.random()*0.05;
-    }
-
-    // halftone background — bright dot field, denser toward center
-    const dist = Math.sqrt(fx*fx + Math.pow((fy-0.5)*0.8,2));
-    const base = 0.5 + (1-Math.min(1,dist)) * 0.28;
-    return Math.min(1, base + (Math.random()-0.5)*0.18);
-  }
-
-  ctx.fillStyle = '#000';
-  ctx.fillRect(0,0,W,H);
-
-  for (let r=0; r<rows; r++) {
-    for (let c=0; c<cols; c++) {
-      const nx = c/cols, ny = r/rows;
-      const b = brightness(nx, ny);
-      const maxR = spacing * 0.47;
-      const dotR = b * maxR;
-      if (dotR < 0.5) continue;
-      ctx.beginPath();
-      ctx.arc(c*spacing + spacing/2, r*spacing + spacing/2, dotR, 0, Math.PI*2);
-      ctx.fillStyle = `rgba(255,255,255,${0.65 + b*0.35})`;
-      ctx.fill();
-    }
-  }
-}
-
 // ── BOOT SEQUENCE ──
 window.addEventListener('load', () => {
-  buildHalftone();
   const blocks = document.querySelectorAll('.boot-block');
   const msgs = ['Starting Ethan OS...','Loading verticals...','Mounting film reel...','Syncing Fusion NYC...','Booting IKHIFA WORKS...','Ready.'];
   let b=0, m=0;
   const bmsg = document.getElementById('boot-msg');
+  // update boot logo text
+  const bl = document.getElementById('boot-logo');
+  if (bl) bl.innerHTML = '<div class="os-name" style="font-size:36px;letter-spacing:1px">Ikhifa<span style="font-weight:400">95</span></div><div class="os-sub">WORKS · Brooklyn NY · 2026</div>';
   const bi = setInterval(() => {
     if (b < blocks.length) { blocks[b].style.opacity='1'; b++; }
   }, 140);
